@@ -49,6 +49,8 @@ public class BoardController extends HttpServlet {
 		// 쿠키 : 부스러기를 떨어뜨린다는 의미에서 나옴
 		response.addCookie(new Cookie("myCookie", "abc123"));
 		// 쿠키 활용 예시 : 아이디 기억하기
+		
+	
 	
 		response.getWriter();
 		
