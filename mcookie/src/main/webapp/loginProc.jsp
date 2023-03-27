@@ -32,7 +32,6 @@
 				}
 			}
 		}
-		
 	}
 	// 로그인 후 다시 login.jsp로 돌려보냄
 	response.sendRedirect("login.jsp");
