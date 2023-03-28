@@ -35,10 +35,8 @@ public class TodoDAO implements ITodoRepo {
 				dto.setTitle(rs.getString("title"));
 				dto.setDescription(rs.getString("description"));
 				dto.setPriority(rs.getInt("priority"));
-				
 				boolean comp = (rs.getInt("completed") == 0) ? false : true;
 				dto.setCompleted(comp);
-				
 				dto.setCreatedAt(rs.getString("createdAt"));
 				dto.setCategoryId(rs.getInt("categoryId"));
 				resultList.add(dto);

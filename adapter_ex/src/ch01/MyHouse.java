@@ -1,27 +1,21 @@
 package ch01;
 
 public class MyHouse {
+	
 	public static void main(String[] args) {
 		
-		AirConditioner airConditioner = new AirConditioner();
-		connect(airConditioner);
-		
-		Cleaner cleaner = new Cleaner();
-		connect(cleaner);
-		
-		HairDryer dryer = new HairDryer();
-		// 철물점에서 어댑터 준비
-		TencoAdapter adapterHairDryer = new TencoAdapter(dryer);
-		connect(adapterHairDryer);
-		
+		// Electronic110v 인터페이스를 구현한 Nintendo
 		Nintendo nintendo = new Nintendo();
-		// 철물점에서 어댑터 준비
+		
+		// 어댑터 패턴이 구현된 객체
 		TencoAdapter adapterNintendo = new TencoAdapter(nintendo);
+		
+		// Electronic110v 인터페이스인 Nintendo를
+		// Electronic220v 인터페이스를 매개변수로 받는 connect 메서드에 사용 가능
 		connect(adapterNintendo);
 		
 	} // end of main
 	
-	// 전기 콘센트
 	public static void connect(Electronic220v electronic220v) {
 		electronic220v.connect();
 	}
