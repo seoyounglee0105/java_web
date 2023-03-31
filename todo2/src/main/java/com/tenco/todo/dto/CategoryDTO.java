@@ -10,6 +10,10 @@ public class CategoryDTO {
 		this.name = name;
 	}
 	
+	public CategoryDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int getId() {
 		return id;
 	}

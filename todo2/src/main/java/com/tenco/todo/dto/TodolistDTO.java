@@ -1,6 +1,6 @@
 package com.tenco.todo.dto;
 
-public class TodolistDTO {
+public class TodolistDTO extends CategoryDTO {
 
 	private int id;
 	private String title;
@@ -10,15 +10,16 @@ public class TodolistDTO {
 	private String createdAt;
 	private int categoryId;
 	
-	public TodolistDTO(String title, String desription, int priority, int categoryId) {
+	public TodolistDTO(String title, String description, int priority, int categoryId) {
+		super();
 		this.title = title;
-		this.description = desription;
+		this.description = description;
 		this.priority = priority;
 		this.categoryId = categoryId;
 	}
 	
 	public TodolistDTO() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 	
 	public int getId() {
