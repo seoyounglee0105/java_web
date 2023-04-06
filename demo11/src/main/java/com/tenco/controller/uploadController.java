@@ -61,13 +61,12 @@ public class uploadController extends HttpServlet {
 			outputStream = new FileOutputStream(file);
 			
 			// 입력 스트림에서 바이트 단위로 읽어 오면서 출력 스트림에 쓰기
-			byte[] buffer = new byte[1024]; // 1024 바이트 == 1 킬로바이트라서 
+			byte[] buffer = new byte[1024]; // 1024 바이트 == 1 킬로바이트라서 (보통 1 킬로바이트씩 데이터를 읽어옴)
 			int length;
 			
 			while ((length = fileContent.read(buffer)) != -1) {
 				outputStream.write(buffer, 0, length); // 시작은 0
 			}
-			
 			System.out.println("File upload 성공");
 			
 		} catch (Exception e) {
